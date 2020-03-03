@@ -11,6 +11,9 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/auth": "^4.8.5",
+    "@nuxtjs/axios": "^5.9.5",
+    "bootstrap-vue": "^2.5.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {}
