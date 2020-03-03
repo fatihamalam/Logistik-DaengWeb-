@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="card mb-3">
             <div class="card-header">
-                <h4 class="card-title">Add Data User</h4>
+                <h4 class="card-title">Edit Data User</h4>
             </div>
             <div class="card-body">
                 <app-user-form />
@@ -13,8 +13,14 @@
 <script>
 import UserForm from '@/components/form/User.vue'
 export default {
-    components: {
-        'app-user-form': UserForm
-    }
+  async asyncData({store, params}) {
+    await Promise.all([
+      store.dispatch('user/getData', params.id)
+    ])
+    return
+  },
+  components: {
+    'app-user-form': UserForm
+  }
 }
 </script>
